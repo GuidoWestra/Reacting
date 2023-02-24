@@ -7,13 +7,14 @@ function App() {
 
 
   return (
-    <>
+  <div>
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-      </Routes>
-    </>
-  );
+        <Routes>
+          <Route path="/Home" element={<Home />}></Route>
+        </Routes>
+  </div>
+
+);
 }
 
 export default App;
