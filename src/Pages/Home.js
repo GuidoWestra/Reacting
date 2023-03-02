@@ -5,29 +5,31 @@ import Alert from 'react-bootstrap/Alert';
 
 
 export default function Home() {
-    let coreA = ["Guido", "Urs", "Remy", "Sjoerd" ];
-    const [num, setNum] = useState(0);  
+    const [num, setNum] = useState(0);
+
+    let coreAms = ["Guido", "Urs", "Remy", "Sjoerd"];
 
     const handleClick = () => {
-        console.log('hi')
-        setNum(num+1);
+        setNum(num + 1);
+        if (num === 3) {
+            setNum(0)
+            console.log('settingNum to 0')
+        }
     };
-    
-    useEffect(() => {    
-        console.log('Incrementing to',num)
 
+    useEffect(() => {
     }, [num])
-    
+
     return (
         <div >
             <div>
                 <Alert key="dark" variant="dark">
-                    {coreA[num]}
+                    {coreAms[num]}
                 </Alert>
 
 
 
-                <Button onClick={handleClick} variant="dark">Dark</Button>
+                <Button onClick={handleClick} variant="dark">Get me a name</Button>
             </div>
         </div >
     )
