@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 
 
+
 export default function Home() {
     const [num, setNum] = useState(0);
 
@@ -21,15 +22,34 @@ export default function Home() {
     }, [num])
 
     return (
-        <div >
+        <div style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+
+        }}>
             <div>
-                <Alert key="dark" variant="dark">
-                    {coreAms[num]}
+                <Alert key="dark" variant="dark" style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginTop: "10vh",
+
+                }}>
+                    <p>
+                        Ticket of the day belongs to:
+                        <b>
+
+                            {" "}{coreAms[num]}
+                        </b>
+                    </p>
+
                 </Alert>
 
+                <Button onClick={handleClick} variant="dark" style={{ width: "30vw" }}>
+                    Get me a name
+                </Button>
 
-
-                <Button onClick={handleClick} variant="dark">Get me a name</Button>
             </div>
         </div >
     )
