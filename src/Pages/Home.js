@@ -8,11 +8,11 @@ import Alert from 'react-bootstrap/Alert';
 export default function Home() {
     const [num, setNum] = useState(0);
 
-    let coreAms = ["Guido", "Urs", "Remy", "Sjoerd"];
+    let coreAms = ["Guido", "Urs", "Remy", "Sjoerd", "Giuseppe", "Davide", "David", "Lorence", "Oguz", "Daniele", "Jone"];
 
     const handleClick = () => {
         setNum(num + 1);
-        if (num === 3) {
+        if (num === 10) {
             setNum(0)
             console.log('settingNum to 0')
         }
