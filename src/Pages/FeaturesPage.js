@@ -18,12 +18,18 @@ export default function FeaturesPage() {
 
         console.log(moviesData)
 
+        if (!moviesData) {
+            return null
+        } else {
+            setMovies(moviesData)
+            console.log(movies)
+        }
     }
 
     useEffect(() => {
-        fetchMovies();
-        console.log('load')
-    }, [])
+        // fetchMovies();
+        // console.log('load')
+    }, [movies])
 
 
     return (
